@@ -35,7 +35,6 @@ public class SuspiciousReadings {
 			double median = readings.stream()
 				.map(reading -> reading.value)
 				.collect(Collectors.toList())
-				.toArray(new Double[readings.size()])
 				.median();
 
 			for (Reading reading : readingByClientId.getValue()) {
