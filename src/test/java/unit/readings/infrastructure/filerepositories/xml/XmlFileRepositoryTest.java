@@ -1,16 +1,17 @@
 package unit.readings.infrastructure.filerepositories.xml;
 
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+
 import com.hluz.readings.domain.Reading;
 import com.hluz.readings.infrastructure.filerepositories.xml.XmlFileRepository;
-
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
-
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Test;
 
 public class XmlFileRepositoryTest {
 
@@ -31,7 +32,7 @@ public class XmlFileRepositoryTest {
 
 		List<Reading> actual = xmlFileRepository.getAll();
 		assertFalse(actual.isEmpty());
-		assertEquals(actual.stream().count(), 1);
+		assertEquals((long) actual.size(), 1);
 
 		Optional<Reading> first = actual.stream().findFirst();
 		assertTrue(first.isPresent());

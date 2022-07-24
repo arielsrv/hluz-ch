@@ -1,36 +1,38 @@
 package com.hluz;
 
+import static java.lang.System.out;
+
 import com.google.inject.Guice;
 import com.google.inject.Injector;
 import com.hluz.readings.application.ReadingDto;
 import com.hluz.readings.application.ReadingsDto;
 import com.hluz.readings.application.SuspiciousReadings;
 
-import static java.lang.System.out;
-
 public class Program {
-    public static void main(String[] args) {
-        String filename = "/Users/ariel.pineiro/projects/personal/hluz-ch/2016-readings.xml";
-        Injector injector = Guice.createInjector(new AppModule(filename));
 
-        SuspiciousReadings suspiciousReadings = injector.getInstance(SuspiciousReadings.class);
+	public static void main(String[] args) {
+		String filename = "/Users/ariel.pineiro/projects/personal/hluz-ch/2016-readings.xml";
+		Injector injector = Guice.createInjector(new AppModule(filename));
 
-        ReadingsDto readingsDto = suspiciousReadings.getSuspiciousReadings();
+		SuspiciousReadings suspiciousReadings = injector.getInstance(SuspiciousReadings.class);
 
-        showHeader(readingsDto);
-        for (ReadingDto readingDto : readingsDto.readingDto) {
-            showRow(readingDto);
-        }
-    }
+		ReadingsDto readingsDto = suspiciousReadings.getSuspiciousReadings();
 
-    private static void showRow(ReadingDto readingDto) {
-        out.printf("| %s\t\t | %s\t\t | %s\t\t | %s\t\t ", readingDto.clientId, readingDto.month, readingDto.value, readingDto.median);
-        out.println();
-    }
+		showHeader(readingsDto);
+		for (ReadingDto readingDto : readingsDto.readingDto) {
+			showRow(readingDto);
+		}
+	}
 
-    private static void showHeader(ReadingsDto readingsDto) {
-        if (readingsDto.readingDto.stream().findAny().isPresent()) {
-            out.println("| Client\t\t | Month\t\t | Suspicious\t\t | Median\t\t ");
-        }
-    }
+	private static void showRow(ReadingDto readingDto) {
+		out.printf("| %s\t\t | %s\t\t | %s\t\t | %s\t\t ", readingDto.clientId, readingDto.month,
+			readingDto.value, readingDto.median);
+		out.println();
+	}
+
+	private static void showHeader(ReadingsDto readingsDto) {
+		if (readingsDto.readingDto.stream().findAny().isPresent()) {
+			out.println("| Client\t\t | Month\t\t | Suspicious\t\t | Median\t\t ");
+		}
+	}
 }
