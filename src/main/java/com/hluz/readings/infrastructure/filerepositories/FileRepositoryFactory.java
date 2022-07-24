@@ -1,12 +1,10 @@
-package src.readings.infrastructure.filerepositories;
+package com.hluz.readings.infrastructure.filerepositories;
 
 import com.google.common.io.Files;
-import src.readings.domain.ReadingsRepository;
-import src.readings.infrastructure.filerepositories.csv.CsvFileRepository;
-import src.readings.infrastructure.filerepositories.xml.XmlFileRepository;
+import com.hluz.readings.domain.ReadingsRepository;
+import com.hluz.readings.infrastructure.filerepositories.csv.CsvFileRepository;
+import com.hluz.readings.infrastructure.filerepositories.xml.XmlFileRepository;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 

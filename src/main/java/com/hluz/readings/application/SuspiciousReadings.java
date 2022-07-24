@@ -1,7 +1,7 @@
-package src.readings.application;
+package com.hluz.readings.application;
 
-import src.readings.domain.Reading;
-import src.readings.domain.ReadingsRepository;
+import com.hluz.readings.domain.Reading;
+import com.hluz.readings.domain.ReadingsRepository;
 
 import javax.inject.Inject;
 import java.util.ArrayList;

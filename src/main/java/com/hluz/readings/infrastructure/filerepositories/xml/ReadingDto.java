@@ -1,4 +1,4 @@
-package src.readings.infrastructure.filerepositories.xml;
+package com.hluz.readings.infrastructure.filerepositories.xml;
 
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
 import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlText;

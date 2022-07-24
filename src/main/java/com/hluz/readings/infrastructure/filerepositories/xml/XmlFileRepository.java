@@ -1,8 +1,8 @@
-package src.readings.infrastructure.filerepositories.xml;
+package com.hluz.readings.infrastructure.filerepositories.xml;
 
 import com.fasterxml.jackson.dataformat.xml.XmlMapper;
-import src.readings.domain.Reading;
-import src.readings.domain.ReadingsRepository;
+import com.hluz.readings.domain.Reading;
+import com.hluz.readings.domain.ReadingsRepository;
 
 import java.io.File;
 import java.io.FileInputStream;

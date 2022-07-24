@@ -2,10 +2,10 @@ package unit.readings.domain;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import src.readings.domain.Reading;
-import src.readings.infrastructure.filerepositories.FileRepository;
-import src.readings.infrastructure.filerepositories.FileRepositoryFactory;
-import src.readings.infrastructure.filerepositories.xml.XmlFileRepository;
+import com.hluz.readings.domain.Reading;
+import com.hluz.readings.infrastructure.filerepositories.FileRepository;
+import com.hluz.readings.infrastructure.filerepositories.FileRepositoryFactory;
+import com.hluz.readings.infrastructure.filerepositories.xml.XmlFileRepository;
 
 import java.util.ArrayList;
 import java.util.List;

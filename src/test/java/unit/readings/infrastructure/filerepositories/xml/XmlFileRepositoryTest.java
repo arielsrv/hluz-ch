@@ -1,8 +1,8 @@
 package unit.readings.infrastructure.filerepositories.xml;
 
 import org.junit.jupiter.api.Test;
-import src.readings.domain.Reading;
-import src.readings.infrastructure.filerepositories.xml.XmlFileRepository;
+import com.hluz.readings.domain.Reading;
+import com.hluz.readings.infrastructure.filerepositories.xml.XmlFileRepository;
 
 import java.io.File;
 import java.io.FileWriter;

@@ -1,4 +1,4 @@
-package src.readings.domain;
+package com.hluz.readings.domain;
 
 import java.util.List;
 

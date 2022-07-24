@@ -1,9 +1,9 @@
-package src;
+package com.hluz;
 
 import com.google.inject.AbstractModule;
-import src.readings.domain.ReadingsRepository;
-import src.readings.infrastructure.filerepositories.FileRepository;
-import src.readings.infrastructure.filerepositories.FileRepositoryFactory;
+import com.hluz.readings.domain.ReadingsRepository;
+import com.hluz.readings.infrastructure.filerepositories.FileRepository;
+import com.hluz.readings.infrastructure.filerepositories.FileRepositoryFactory;
 
 public class AppModule extends AbstractModule {
 

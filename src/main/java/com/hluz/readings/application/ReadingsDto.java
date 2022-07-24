@@ -1,4 +1,4 @@
-package src.readings.application;
+package com.hluz.readings.application;
 
 import java.util.ArrayList;
 

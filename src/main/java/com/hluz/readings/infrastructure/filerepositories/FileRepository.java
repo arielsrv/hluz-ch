@@ -1,7 +1,7 @@
-package src.readings.infrastructure.filerepositories;
+package com.hluz.readings.infrastructure.filerepositories;
 
-import src.readings.domain.Reading;
-import src.readings.domain.ReadingsRepository;
+import com.hluz.readings.domain.Reading;
+import com.hluz.readings.domain.ReadingsRepository;
 
 import java.util.List;
 

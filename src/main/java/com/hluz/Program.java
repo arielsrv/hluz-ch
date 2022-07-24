@@ -1,19 +1,16 @@
-package src;
+package com.hluz;
 
 import com.google.inject.Guice;
 import com.google.inject.Injector;
-import src.readings.application.ReadingDto;
-import src.readings.application.ReadingsDto;
-import src.readings.application.SuspiciousReadings;
-import src.readings.domain.ReadingsRepository;
-import src.readings.infrastructure.filerepositories.FileRepository;
-import src.readings.infrastructure.filerepositories.FileRepositoryFactory;
+import com.hluz.readings.application.ReadingDto;
+import com.hluz.readings.application.ReadingsDto;
+import com.hluz.readings.application.SuspiciousReadings;
 
 import static java.lang.System.out;
 
 public class Program {
     public static void main(String[] args) {
-        String filename = "/Users/arielpineiro/projects/personal/holaluz-challenge/2016-readings.xml";
+        String filename = "/Users/ariel.pineiro/projects/personal/hluz-ch/2016-readings.xml";
         Injector injector = Guice.createInjector(new AppModule(filename));
 
         SuspiciousReadings suspiciousReadings = injector.getInstance(SuspiciousReadings.class);

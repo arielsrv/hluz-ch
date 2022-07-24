@@ -2,10 +2,10 @@ package unit.readings.application;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import src.readings.application.ReadingsDto;
-import src.readings.application.SuspiciousReadings;
-import src.readings.domain.Reading;
-import src.readings.domain.ReadingsRepository;
+import com.hluz.readings.application.ReadingsDto;
+import com.hluz.readings.application.SuspiciousReadings;
+import com.hluz.readings.domain.Reading;
+import com.hluz.readings.domain.ReadingsRepository;
 
 import java.util.ArrayList;
 

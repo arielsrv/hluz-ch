@@ -1,9 +1,9 @@
 package unit.readings.infrastructure;
 
 import org.junit.jupiter.api.Test;
-import src.readings.domain.ReadingsRepository;
-import src.readings.infrastructure.filerepositories.FileRepositoryFactory;
-import src.readings.infrastructure.filerepositories.xml.XmlFileRepository;
+import com.hluz.readings.domain.ReadingsRepository;
+import com.hluz.readings.infrastructure.filerepositories.FileRepositoryFactory;
+import com.hluz.readings.infrastructure.filerepositories.xml.XmlFileRepository;
 
 import static org.junit.jupiter.api.Assertions.*;
 
