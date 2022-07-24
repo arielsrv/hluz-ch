@@ -1,0 +1,1 @@
+package com.hluz.readings.application;import java.util.Arrays;public class DoubleExtensions {	public static double median(Double[] values) {		Arrays.sort(values);		int length = values.length;		if (length % 2 == 0) {			return (values[length / 2 - 1] + values[length / 2]) / 2;		} else {			return values[length / 2];		}	}}
