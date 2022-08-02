@@ -7,10 +7,17 @@ import com.google.inject.Injector;
 import com.hluz.readings.application.ReadingDto;
 import com.hluz.readings.application.ReadingsDto;
 import com.hluz.readings.application.SuspiciousReadings;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class Program {
 
+	private static Logger logger = LoggerFactory.getLogger(Program.class);
+
 	public static void main(String[] args) {
+
+		logger.info("Loading app...");
+
 		String filename = "/Users/ariel.pineiro/projects/personal/hluz-ch/2016-readings.xml";
 		Injector injector = Guice.createInjector(new AppModule(filename));
 
