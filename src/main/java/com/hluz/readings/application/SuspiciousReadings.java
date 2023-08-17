@@ -4,11 +4,11 @@ import static java.util.stream.Collectors.groupingBy;
 
 import com.hluz.readings.domain.Reading;
 import com.hluz.readings.domain.ReadingsRepository;
+import jakarta.inject.Inject;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
-import javax.inject.Inject;
 import lombok.experimental.ExtensionMethod;
 
 @ExtensionMethod({DoubleExtensions.class})
