@@ -13,17 +13,17 @@ repositories {
 
 dependencies {
     implementation 'com.google.guava:guava:33.2.1-jre'
-    implementation 'commons-cli:commons-cli:1.6.0'
+    implementation 'commons-cli:commons-cli:1.8.0'
     implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.17.2'
     implementation group: 'com.google.inject', name: 'guice', version: '7.0.0'
-    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '2.0.13'
+    implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '2.1.0-alpha1'
     implementation 'org.projectlombok:lombok:1.18.34'
     annotationProcessor 'org.projectlombok:lombok:1.18.34'
     testAnnotationProcessor 'org.projectlombok:lombok:1.18.34'
     testCompileOnly 'org.projectlombok:lombok:1.18.34'
     testImplementation 'org.mockito:mockito-core:5.12.0'
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.10.3'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.10.3'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.0-RC1'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.0-RC1'
 }
 
 test {
