@@ -1,10 +1,10 @@
 package com.hluz.readings.application;
 
-import java.util.ArrayList;
+import java.util.List;
 
 public class ReadingsDto {
 
-	public ArrayList<ReadingDto> readingDto;
+	public List<ReadingDto> readingDto;
 }
 
 

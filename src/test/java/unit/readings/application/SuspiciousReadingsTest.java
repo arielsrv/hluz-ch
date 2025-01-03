@@ -2,14 +2,17 @@ package unit.readings.application;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.when;
 
+import com.hluz.readings.application.ReadingDto;
 import com.hluz.readings.application.ReadingsDto;
 import com.hluz.readings.application.SuspiciousReadings;
 import com.hluz.readings.domain.Reading;
 import com.hluz.readings.domain.ReadingsRepository;
 import java.util.ArrayList;
+import java.util.Optional;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -32,10 +35,12 @@ public class SuspiciousReadingsTest {
 
 		assertNotNull(actual);
 		assertNotNull(actual.readingDto);
-		assertEquals("1", actual.readingDto.get(0).clientId);
-		assertEquals(1, actual.readingDto.get(0).month);
-		assertEquals(5.0, actual.readingDto.get(0).value);
-		assertEquals(300, actual.readingDto.get(0).median);
+		assertTrue(actual.readingDto.stream().findFirst().isPresent());
+		ReadingDto readingDto = actual.readingDto.stream().findFirst().get();
+		assertEquals("1", readingDto.clientId);
+		assertEquals(1, readingDto.month);
+		assertEquals(5.0, readingDto.value);
+		assertEquals(300, readingDto.median);
 	}
 
 	private ArrayList<Reading> getAllReadings() {

@@ -33,14 +33,15 @@ public class ReadingRepositoryTest {
 		when(this.fileRepositoryFactory.get()).thenReturn(this.xmlFileRepository);
 		when(this.xmlFileRepository.getAll()).thenReturn(getAll());
 
-		List<Reading> actual = this.readingsRepository.getAll();
+		List<Reading> readings = this.readingsRepository.getAll();
 
-		assertFalse(actual.isEmpty());
-		assertEquals((long) actual.size(), 1);
-		assertTrue(actual.stream().findFirst().isPresent());
-		assertEquals(actual.stream().findFirst().get().clientId, "1");
-		assertEquals(actual.stream().findFirst().get().value, 1.0);
-		assertEquals(actual.stream().findFirst().get().month, 1);
+		assertFalse(readings.isEmpty());
+		assertEquals(1, (long) readings.size());
+		assertTrue(readings.stream().findFirst().isPresent());
+		Reading actual = readings.stream().findFirst().get();
+		assertEquals("1", actual.clientId);
+		assertEquals(1.0, actual.value);
+		assertEquals(1, actual.month);
 	}
 
 	private List<Reading> getAll() {

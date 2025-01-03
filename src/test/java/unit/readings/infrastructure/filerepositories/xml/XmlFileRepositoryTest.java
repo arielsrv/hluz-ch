@@ -18,26 +18,27 @@ public class XmlFileRepositoryTest {
 	@Test
 	public void get_values_from_xml_file() throws IOException {
 
-		String content = "<?xml version=\"1.0\"?>\n" +
-			"<readings>\n" +
-			"\t<reading clientID=\"583ef6329df6b\" period=\"2016-01\">66</reading>\n" +
-			"</readings>";
+		String xml = """
+			<?xml version="1.0"?>
+			<readings>
+			\t<reading clientID="583ef6329df6b" period="2016-01">66</reading>
+			</readings>""";
 
 		File file = File.createTempFile("repository", ".xml");
 		FileWriter writer = new FileWriter(file);
-		writer.write(content);
+		writer.write(xml);
 		writer.close();
 
 		XmlFileRepository xmlFileRepository = new XmlFileRepository(file.getAbsolutePath());
 
 		List<Reading> actual = xmlFileRepository.getAll();
 		assertFalse(actual.isEmpty());
-		assertEquals((long) actual.size(), 1);
+		assertEquals(1, (long) actual.size());
 
 		Optional<Reading> first = actual.stream().findFirst();
 		assertTrue(first.isPresent());
-		assertEquals(first.get().clientId, "583ef6329df6b");
-		assertEquals(first.get().month, 1);
-		assertEquals(first.get().value, 66);
+		assertEquals("583ef6329df6b", first.get().clientId);
+		assertEquals(1, first.get().month);
+		assertEquals(66, first.get().value);
 	}
 }
