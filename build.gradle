@@ -22,7 +22,7 @@ repositories {
 dependencies {
     implementation 'com.google.guava:guava:33.4.0-jre'
     implementation 'commons-cli:commons-cli:1.9.0'
-    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.18.2'
+    implementation 'com.fasterxml.jackson.dataformat:jackson-dataformat-xml:2.18.3'
     implementation group: 'com.google.inject', name: 'guice', version: '7.0.0'
     implementation group: 'org.slf4j', name: 'slf4j-log4j12', version: '2.1.0-alpha1'
     implementation "org.projectlombok:lombok:$lombokVersion"
